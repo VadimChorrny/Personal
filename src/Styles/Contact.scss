@@ -1,0 +1,51 @@
+.contact-containeer{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.block-name h1{
+    color: #fff;
+}
+
+.block-contact-list{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 85px;
+    flex-wrap: wrap;
+}
+
+.contact{
+    width: 500px;
+    height: 100px;
+    background: #131319;
+    text-align: center;
+    border: 1px solid #40454E;
+    box-shadow: 10px 10px 0px #FF4E50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact button{
+    border: none;
+}
+
+.contact button a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+
+.contact:hover button a{
+    color: #FF4E50;
+    transition: 1s;
+}
+
+@media screen and (max-width: 1536px) {
+    .contact{
+        width: 380px;
+    }
+}
