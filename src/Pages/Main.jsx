@@ -20,6 +20,7 @@ export default function Main() {
                 <Route exact path="/contact" component={Contact} key="reload" />
                 <Route exact path ="/crypto" component={Crypto} key="reload" />
             </Switch>
+            <Content />
             </BrowserRouter>
         </div>
     );

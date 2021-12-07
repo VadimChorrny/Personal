@@ -9,14 +9,14 @@ export default function Crypto() {
             </div>
             <div className="block block-work-list">
                 <div className="token" id="first">
-                    <h2>Title</h2>
-                    <h3>Subtitle</h3>
-                    <button><a href="#" target="_blank">View</a></button>
+                    <h2>My goal</h2>
+                    <h3>Popular NFT Art</h3>
+                    <button><a href="https://rarible.com/chorrny?tab=owned" target="_blank">View</a></button>
                 </div>
                 <div className="token" id="second">
-                    <h2>Title</h2>
-                    <h3>Subtitle</h3>
-                    <button><a href="#" target="_blank">View</a></button>
+                    <h2>In Progress</h2>
+                    <h3>Earning money</h3>
+                    <button><a href="https://rarible.com/chorrny?tab=owned" target="_blank">View</a></button>
                 </div>
                 <div className="token" id="third">
                     <h2>Old Pixel Cars</h2>
