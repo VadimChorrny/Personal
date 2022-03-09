@@ -1,29 +1,43 @@
-import React from 'react'
-import '../../Styles/Crypto.scss'
+import React from "react";
+import axios from "axios";
+import "../../Styles/Crypto.scss";
 
-export default function Crypto() {
-    return (
+export default class Crypto extends React.Component {
+    state = {
+        persons: [],
+    };
+
+    componentDidMount() {
+        axios.get(`https://localhost:44356/api/Cart`).then((res) => {
+            const persons = res.data;
+            this.setState({ persons });
+        });
+    }
+
+    render() {
+        return (
             <div className="nfc-containeer">
-            <div className="block block-name">
-                <h1>NFT</h1>
+                <div className="block block-name">
+                    <h1>NFT</h1>
+                </div>
+                <div className="block block-work-list">
+                    {this.state.persons.map((nft) => (
+                        <div className="token">
+                            <h2>{nft.title}</h2>
+                            <h3>{nft.description}</h3>
+                            <button>
+                                <a
+                                    href={nft.url}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    View
+                                </a>
+                            </button>
+                        </div>
+                    ))}
+                </div>
             </div>
-            <div className="block block-work-list">
-                <div className="token" id="first">
-                    <h2>My goal</h2>
-                    <h3>Popular NFT Art</h3>
-                    <button><a href="https://rarible.com/chorrny?tab=owned" target="_blank">View</a></button>
-                </div>
-                <div className="token" id="second">
-                    <h2>In Progress</h2>
-                    <h3>Earning money</h3>
-                    <button><a href="https://rarible.com/chorrny?tab=owned" target="_blank">View</a></button>
-                </div>
-                <div className="token" id="third">
-                    <h2>Old Pixel Cars</h2>
-                    <h3>Personal collection</h3>
-                    <button><a target="_blank" href="https://rarible.com/token/0xF6793dA657495ffeFF9Ee6350824910Abc21356C:11512981452410518653097713587370283918992366549962068815297995088797544480769?tab=details">View</a></button>
-                </div>
-            </div>
-        </div>
-    )
+        );
+    }
 }
