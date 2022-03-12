@@ -8,6 +8,8 @@ import { BrowserRouter, Route, Redirect } from "react-router-dom";
 import { Switch } from "react-router";
 import Crypto from "./NFT/Crypto";
 import Blog from "./Blog/Blog";
+import Resume from "./CV/Resume";
+import Privacy from "./Privacy/Privacy";
 
 export default function Main() {
     return (
@@ -36,6 +38,18 @@ export default function Main() {
                         key="reload"
                     />
                     <Route exact path="/blog" component={Blog} key="reload" />
+                    <Route
+                        exact
+                        path="/resume"
+                        component={Resume}
+                        key="reload"
+                    />
+                    <Route
+                        exact
+                        path="/privacy"
+                        component={Privacy}
+                        key="reload"
+                    />
                 </Switch>
                 <Redirect exact from="/" component={Content} key="reload" />
             </BrowserRouter>
