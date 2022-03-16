@@ -20,7 +20,7 @@ export default class Blog extends Component {
     }
 
     componentDidMount() {
-        axios.get(`https://localhost:44356/api/Blog`).then((res) => {
+        axios.get(`http://www.portfolio-vadym.somee.com/api/blog`).then((res) => {
             const blogs = res.data;
             this.setState({ blogs });
         });

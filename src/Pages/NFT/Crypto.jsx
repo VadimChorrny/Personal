@@ -8,7 +8,7 @@ export default class Crypto extends React.Component {
     };
 
     componentDidMount() {
-        axios.get(`https://localhost:44356/api/Cart`).then((res) => {
+        axios.get(`http://www.portfolio-vadym.somee.com/api/cart`).then((res) => {
             const persons = res.data;
             this.setState({ persons });
         });

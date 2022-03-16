@@ -10,6 +10,7 @@ import Crypto from "./NFT/Crypto";
 import Blog from "./Blog/Blog";
 import Resume from "./CV/Resume";
 import Privacy from "./Privacy/Privacy";
+import Idea from "./Idea/Idea";
 
 export default function Main() {
     return (
@@ -31,12 +32,7 @@ export default function Main() {
                         component={Contact}
                         key="reload"
                     />
-                    <Route
-                        exact
-                        path="/crypto"
-                        component={Crypto}
-                        key="reload"
-                    />
+                    <Route exact path="/idea" component={Idea} key="reload" />
                     <Route exact path="/blog" component={Blog} key="reload" />
                     <Route
                         exact

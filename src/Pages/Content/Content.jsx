@@ -1,15 +1,39 @@
-import React from "react";
-import "../../Styles/Index.scss";
-import Footer from "../Footer/Footer.jsx";
+import React, { Component } from "react";
+import Footer from "../Footer/Footer";
+import axios from "axios";
 
-export default function Content() {
-    return (
-        <>
-            <div className="content_containeer">
-                <h1>Full-stack .NET developer</h1>
-                <p>Strive not to be a success, but rather to be of value.</p>
+class Content extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            jokes: "",
+        };
+    }
+    componentDidMount() {
+        axios
+            .get(`https://sv443.net/jokeapi/v2/joke/Programming?type=single`)
+            .then((res) => {
+                console.log(res.data.joke);
+                const joke = res.data.joke;
+                this.setState({ jokes: joke });
+            });
+    }
+    render() {
+        return (
+            <div>
+                <div className="content_containeer">
+                    <h1>Full-stack HTML developer</h1>
+                    <p>{this.state.jokes}</p>
+                    <Footer
+                        hours="1500"
+                        projects="10"
+                        skills="16"
+                        other="19"
+                    ></Footer>
+                </div>
             </div>
-            <Footer hours="150" projects="10" skills="16" other="19"></Footer>
-        </>
-    );
+        );
+    }
 }
+
+export default Content;

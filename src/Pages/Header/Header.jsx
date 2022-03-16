@@ -21,8 +21,8 @@ export default class Header extends React.Component {
                     </div>
                     <div className="menu-button">
                         <button>
-                            <NavLink to="/crypto">
-                                <a href="#">Crypto</a>
+                            <NavLink to="/idea">
+                                <a href="#">Ideas</a>
                             </NavLink>
                         </button>
                     </div>

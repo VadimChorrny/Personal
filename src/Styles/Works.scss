@@ -21,7 +21,7 @@
 
 .work {
     width: 400px;
-    height: 250px;
+    min-height: 250px;
     background: #131319;
     border: 1px solid #40454e;
     box-shadow: 10px 10px 0px #ff4e50;
@@ -64,7 +64,7 @@
     }
     .work {
         width: 300px;
-        height: 300px;
+        min-height: 300px;
     }
 
     .work button {

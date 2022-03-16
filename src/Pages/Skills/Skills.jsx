@@ -7,7 +7,7 @@ export default class Skills extends React.Component {
         skills: [],
     };
     componentDidMount() {
-        axios.get(`https://localhost:44356/api/Skill`).then((res) => {
+        axios.get(`http://www.portfolio-vadym.somee.com/api/skill`).then((res) => {
             const skills = res.data;
             this.setState({ skills });
         });
