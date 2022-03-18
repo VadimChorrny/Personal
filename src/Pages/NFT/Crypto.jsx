@@ -21,8 +21,8 @@ export default class Crypto extends React.Component {
                     <h1>NFT</h1>
                 </div>
                 <div className="block block-work-list">
-                    {this.state.persons.map((nft) => (
-                        <div className="token">
+                    {this.state.persons.map((nft,index) => (
+                        <div className="token" key={index}>
                             <h2>{nft.title}</h2>
                             <h3>{nft.description}</h3>
                             <button>

@@ -20,10 +20,12 @@ export default class Blog extends Component {
     }
 
     componentDidMount() {
-        axios.get(`http://www.portfolio-vadym.somee.com/api/blog`).then((res) => {
-            const blogs = res.data;
-            this.setState({ blogs });
-        });
+        axios
+            .get(`http://www.portfolio-vadym.somee.com/api/blog`)
+            .then((res) => {
+                const blogs = res.data;
+                this.setState({ blogs });
+            });
     }
 
     render() {
@@ -35,8 +37,8 @@ export default class Blog extends Component {
                     </div>
                     <div class="container">
                         <div class="cards">
-                            {this.state.blogs.map((blog) => (
-                                <div class="card card-one">
+                            {this.state.blogs.map((blog, index) => (
+                                <div class="card card-one" key={index}>
                                     <h2 class="card-title">{blog.title}</h2>
                                     <p class="date">{blog.date}</p>
                                     <button onClick={this.handleClick}>

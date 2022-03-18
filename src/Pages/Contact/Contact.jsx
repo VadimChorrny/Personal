@@ -26,6 +26,7 @@ const Contact = () => {
                         <a
                             href="https://mail.google.com/mail/u/0/#inbox"
                             target="_blank"
+                            rel="noreferrer"
                         >
                             Gmail
                         </a>
@@ -40,6 +41,7 @@ const Contact = () => {
                         <a
                             target="_blank"
                             href="https://github.com/VadimChorrny"
+                            rel="noreferrer"
                         >
                             GitHub
                         </a>
@@ -56,24 +58,42 @@ const Contact = () => {
                         <a
                             target="_blank"
                             href="https://www.linkedin.com/in/vadim-chorniy-3a066a1b7/"
+                            rel="noreferrer"
                         >
                             Linkedin
                         </a>
                     </button>
                 </div>
                 <div className="contact">
-                    <button
-                        onClick={() =>
-                            copyToClipBoard(
-                                "https://www.linkedin.com/in/vadim-chorniy-3a066a1b7/"
-                            )
-                        }
-                    >
+                    <button>
                         <a
                             target="_blank"
                             href="https://kuna.io?r=kunaid-xbk8lincwa37"
+                            rel="noreferrer"
                         >
                             Crypto Referal Link
+                        </a>
+                    </button>
+                </div>
+                <div className="contact">
+                    <button onClick={() => copyToClipBoard("@whitewarrior")}>
+                        <a
+                            target="_blank"
+                            href="https://dev.to/whitewarrior"
+                            rel="noreferrer"
+                        >
+                            DEV COMMUNITY
+                        </a>
+                    </button>
+                </div>
+                <div className="contact">
+                    <button onClick={() => copyToClipBoard("я мавпа рижа")}>
+                        <a
+                            target="_blank"
+                            href="https://freelancehunt.com/freelancer/chorrny.html"
+                            rel="noreferrer"
+                        >
+                            FREELANCE
                         </a>
                     </button>
                 </div>

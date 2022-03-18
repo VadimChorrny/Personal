@@ -6,10 +6,12 @@ export default class Works extends React.Component {
         works: [],
     };
     componentDidMount() {
-        axios.get(`https://localhost:44356/api/Work`).then((res) => {
-            const works = res.data;
-            this.setState({ works });
-        });
+        axios
+            .get(`http://www.portfolio-vadym.somee.com/api/work`)
+            .then((res) => {
+                const works = res.data;
+                this.setState({ works });
+            });
     }
     render() {
         return (
@@ -18,8 +20,8 @@ export default class Works extends React.Component {
                     <h1>Works</h1>
                 </div>
                 <div className="block block-work-list">
-                    {this.state.works.map((work) => (
-                        <div className="work">
+                    {this.state.works.map((work, index) => (
+                        <div className="work" key={index}>
                             <h2>{work.name}</h2>
                             <h3>{work.description}</h3>
                             <button>

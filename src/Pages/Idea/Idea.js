@@ -27,8 +27,8 @@ export default class Idea extends Component {
                     <h1>Ideas</h1>
                 </div>
                 <div className="block block-work-list">
-                    {this.state.ideas.map((idea) => (
-                        <div className="work">
+                    {this.state.ideas.map((idea, index) => (
+                        <div className="work" key={index}>
                             <h2>{idea.title}</h2>
                             <h3>{idea.description}</h3>
                             <h3>{idea.technology}</h3>

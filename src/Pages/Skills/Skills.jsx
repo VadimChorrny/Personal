@@ -7,10 +7,12 @@ export default class Skills extends React.Component {
         skills: [],
     };
     componentDidMount() {
-        axios.get(`http://www.portfolio-vadym.somee.com/api/skill`).then((res) => {
-            const skills = res.data;
-            this.setState({ skills });
-        });
+        axios
+            .get(`http://www.portfolio-vadym.somee.com/api/skill`)
+            .then((res) => {
+                const skills = res.data;
+                this.setState({ skills });
+            });
     }
     render() {
         return (
@@ -20,8 +22,8 @@ export default class Skills extends React.Component {
                 </div>
                 <div className="block block-list-skills">
                     <div className="block-column">
-                        {this.state.skills.map((skill) => (
-                            <div className="skill">
+                        {this.state.skills.map((skill, index) => (
+                            <div className="skill" key={index}>
                                 <a target="_blanc" href={skill.url}>
                                     {skill.name}
                                 </a>
