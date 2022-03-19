@@ -10,25 +10,25 @@
     display: flex;
     align-items: center;
     flex-direction: row;
+    background-color: #131319;
 }
 
 .menu-button {
-    color: #ffffff;
     padding-left: 1rem;
     padding-right: 1rem;
     font-weight: 500;
     font-size: 20px;
+    background-color: #131319;
 }
 
 .menu-button a {
     text-decoration: none;
-    color: #fff;
+    background-color: #131319;
 }
 
 .block-logo {
     font-weight: 700;
     font-size: 40px;
-    color: #ffffff;
     text-decoration: none;
 }
 
@@ -39,7 +39,6 @@
 
 .block-logo a {
     text-decoration: none;
-    color: #fff;
 }
 
 .block-contact {
@@ -48,18 +47,24 @@
     margin-top: 10px;
 }
 
+.menu-button button {
+    background-color: #131319;
+}
+
 .menu-button:hover a {
     color: #ff4e50;
     animation: changePlace 1s;
     transition: 0.5s;
+    background-color: #131319;
+    padding: 5px;
+}
+
+#link {
+    background-color: #131319;
 }
 
 .menu-button button {
     border: none;
-}
-
-.menu-button p {
-    color: #fff;
 }
 
 .underline {

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../../Styles/Contact.scss";
+import BuyMeACoffe from "../BuyMeACoffe.js";
 
 const Contact = () => {
     const [copySuccess, setCopySuccess] = useState("");
@@ -97,6 +98,8 @@ const Contact = () => {
                         </a>
                     </button>
                 </div>
+
+                <BuyMeACoffe />
             </div>
         </div>
     );

@@ -9,7 +9,11 @@ export default class Header extends React.Component {
                 <div className="block block-row">
                     <div class="menu-button">
                         <button>
-                            <NavLink to="/works">Works</NavLink>
+                            <a href="#">
+                                <NavLink to="/works" id="link">
+                                    Works
+                                </NavLink>
+                            </a>
                         </button>
                     </div>
                     <div class="menu-button">
